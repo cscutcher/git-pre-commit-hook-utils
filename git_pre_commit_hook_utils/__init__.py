@@ -4,6 +4,7 @@ import re
 import os.path
 import fnmatch
 
+from __future__ import unicode_literals
 
 ExecutionResult = collections.namedtuple(
     'ExecutionResult',
@@ -103,9 +104,9 @@ def path_to_hook():
         raise RuntimeError(result.stderr)
     else:
         return os.path.join(
-            os.path.abspath(result.stdout.rstrip('\n')),
-            'hooks',
-            'pre-commit',
+            os.path.abspath(result.stdout.rstrip(b'\n')),
+            b'hooks',
+            b'pre-commit',
         )
 
 
