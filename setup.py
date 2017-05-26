@@ -22,4 +22,5 @@ setup(
     author_email='evvers@ya.ru',
     url='https://github.com/evvers/git-pre-commit-hook-utils',
     packages=find_packages(),
+    use_2to3=True,
 )
